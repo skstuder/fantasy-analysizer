@@ -16,21 +16,29 @@
             <td v-if="index < 11" class="racing-font border px-8 py-4">
               {{ position }}
             </td>
-            <td v-if="index < 11" class="border px-8 py-4">{{ points }}</td>
+            <td v-if="index < 11" class="border px-8 py-4 racing-font">
+              {{ points }}pts
+            </td>
           </tr>
         </div>
         <div>
-          <tr class="collapse h-auto w-100 sm:table-row">
+          <tr class="hidden h-auto w-100 sm:table-row">
             <th class="bg-red-600 border text-left px-8 py-4">Position</th>
             <th class="bg-red-600 border text-left px-8 py-4">
               Points You Get
             </th>
           </tr>
+          <tr class="table-row sm:hidden h-0">
+            <th class="w-100 h-0" style="width: 126px"></th>
+            <th class="w-100 h-0" style="width: 175px"></th>
+          </tr>
           <tr v-for="(points, position, index) in positions" :key="position">
             <td v-if="index > 10" class="racing-font border px-8 py-4">
               {{ position }}
             </td>
-            <td v-if="index > 10" class="border px-8 py-4">{{ points }}</td>
+            <td v-if="index > 10" class="border px-8 py-4 racing-font">
+              {{ points }}pts
+            </td>
           </tr>
         </div>
       </table>

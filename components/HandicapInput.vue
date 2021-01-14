@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex flex-row mb-4 justify-center items-baseline">
+    <div class="flex flex-row mb-4 mx-auto justify-center items-baseline">
       <label
         class="mr-2 uppercase font-bold text-lg text-grey-darkest"
         for="handicap"
@@ -17,8 +17,15 @@ export default {}
 
 <style scoped>
 input {
-  width: 10%;
-  height: 50%;
+  width: 50px;
+  height: 30%;
+  background: white;
+  border: gray;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #222;
 }
 </style>
 >

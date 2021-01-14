@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="flex flex-row mb-4 justify-center items-baseline">
+    <div class="flex flex-row mb-4 mx-auto justify-center items-baseline">
       <label
         class="mr-5 uppercase font-bold text-lg text-grey-darkest"
         for="handicap"
-        >Allstar?</label
+        >Is This Rider an Allstar?</label
       >
       <input type="checkbox" class="border mt-3 py-2 px-3 text-grey-darkest" />
     </div>

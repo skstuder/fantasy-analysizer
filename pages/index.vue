@@ -2,17 +2,12 @@
   <div class="container bg-dark">
     <div class="w-full rounded shadow-lg p-8 m-4">
       <h1 class="title pb-5">Rider Point Potiental</h1>
-      <div class="flex justify-center">
+      <div>
         <handicap-input class="pb-5" />
         <allstar-checkbox class="pb-5"></allstar-checkbox>
       </div>
-      <button
-        class="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded mb-10"
-      >
-        Submit
-      </button>
       <no-results />
-      <results-grid v-if="!handicapEntered" />
+      <results-grid v-if="handicapEntered" />
     </div>
   </div>
 </template>

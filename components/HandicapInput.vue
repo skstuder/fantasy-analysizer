@@ -8,6 +8,7 @@
           >Enter handicap between -2 and 16</label
         >
         <input
+          id="handicapInput"
           v-model.trim="$v.text.$model"
           class="border py-2 px-3 text-grey-darkest"
           type="text"
@@ -15,14 +16,15 @@
             'is-invalid': $v.text.error,
             'is-valid': !$v.text.$invalid,
           }"
+          @keyup="handicapChanged($v.text.$model)"
         />
       </div>
       <div>
         <div class="invalid-feedback">
-          <span class="text-red-400" v-if="!$v.text.required"
+          <span v-if="!$v.text.required" class="text-red-400"
             >Handicap is required</span
           >
-          <span class="text-red-400" v-if="!$v.text.between"
+          <span v-if="!$v.text.between" class="text-red-400"
             >Handicap must be within the range of -2 and 16</span
           >
         </div>
@@ -43,6 +45,16 @@ export default {
     text: {
       required,
       between: between(-2, 16),
+    },
+  },
+  methods: {
+    handicapChanged(text) {
+      if (!this.$v.$invalid) {
+        this.$emit('handicapChanged', text)
+      }
+      if (this.$v.$invalid) {
+        this.$emit('handicapChanged', '')
+      }
     },
   },
 }

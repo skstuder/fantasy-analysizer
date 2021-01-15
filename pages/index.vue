@@ -3,11 +3,11 @@
     <div class="w-full rounded shadow-lg p-8 m-4">
       <h1 class="title pb-5">Rider Point Potiental</h1>
       <div>
-        <handicap-input class="pb-5" />
+        <handicap-input class="pb-5" @handicapChanged="updateHandicap" />
         <allstar-checkbox class="pb-5"></allstar-checkbox>
       </div>
       <no-results />
-      <results-grid v-if="handicapEntered" />
+      <results-grid v-if="handicap" />
     </div>
   </div>
 </template>
@@ -26,9 +26,9 @@ export default {
       handicapEntered: false,
     }
   },
-  computed: {
-    hanicapEntered() {
-      return this.handicap
+  methods: {
+    updateHandicap(value) {
+      this.handicap = value
     },
   },
 }

@@ -9,9 +9,19 @@
           @allStarChanged="updateAllStar"
         ></allstar-checkbox>
       </div>
-      <no-results v-if="!handicap" />
-      <info-area v-if="handicap" :allstar="allstar" :handicap="handicap" />
-      <results-grid v-if="handicap" />
+      <transition name="fade">
+        <no-results v-if="!handicap" />
+      </transition>
+      <transition name="fade">
+        <info-area v-show="handicap" :allstar="allstar" :handicap="handicap" />
+      </transition>
+      <transition name="fade">
+        <results-grid
+          v-show="handicap"
+          :allstar="allstar"
+          :handicap="handicap"
+        />
+      </transition>
     </div>
   </div>
 </template>
@@ -32,7 +42,7 @@ export default {
   },
   data() {
     return {
-      handicap: 0,
+      handicap: '',
       allstar: false,
       handicapEntered: false,
     }
@@ -89,5 +99,14 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

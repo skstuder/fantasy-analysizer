@@ -45,6 +45,15 @@
 
 <script>
 export default {
+  props: {
+    handicap: {
+      type: String,
+      default: '',
+    },
+    allstar: {
+      type: Boolean,
+    },
+  },
   data() {
     return {
       positions: {
@@ -73,8 +82,20 @@ export default {
       },
     }
   },
+  watch: {
+    handicap() {
+      this.calculatePoints()
+    },
+    allstar() {
+      this.calculatePoints()
+    },
+  },
   methods: {
-    definePositions() {},
+    calculatePoints() {
+      if (this.handicap) {
+        // Come up with logic that like loops through the object and maps on new values
+      }
+    },
   },
 }
 </script>

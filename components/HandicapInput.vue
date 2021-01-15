@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex flex-col mb-4 mx-auto justify-baseline items-center">
-      <div class="flex flex-row items-baseline">
+      <div class="flex flex-row items-baseline items-center">
         <label
           class="mr-2 uppercase font-bold text-lg text-grey-darkest"
           for="handicap"

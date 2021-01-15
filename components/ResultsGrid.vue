@@ -12,7 +12,10 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(points, position, index) in positions" :key="position">
+            <tr
+              v-for="(points, position, index) in convertedPositions"
+              :key="position"
+            >
               <td v-if="index < 11" class="racing-font border px-8 py-4">
                 {{ position }}
               </td>
@@ -36,7 +39,10 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(points, position, index) in positions" :key="position">
+            <tr
+              v-for="(points, position, index) in convertedPositions"
+              :key="position"
+            >
               <td v-if="index > 10" class="racing-font border px-8 py-4">
                 {{ position }}
               </td>
@@ -66,28 +72,28 @@ export default {
     return {
       convertedPositions: {},
       positions: {
-        '1st': 26,
-        '2nd': 23,
-        '3rd': 21,
-        '4th': 19,
-        '5th': 18,
-        '6th': 17,
-        '7th': 16,
-        '8th': 15,
-        '9th': 14,
-        '10th': 13,
-        '11th': 12,
-        '12th': 11,
-        '13th': 10,
-        '14th': 9,
-        '15th': 8,
-        '16th': 7,
-        '17th': 6,
-        '18th': 5,
-        '19th': 4,
-        '20th': 3,
-        '21st': 2,
-        '22nd': 1,
+        1: 26,
+        2: 23,
+        3: 21,
+        4: 19,
+        5: 18,
+        6: 17,
+        7: 16,
+        8: 15,
+        9: 14,
+        10: 13,
+        11: 12,
+        12: 11,
+        13: 10,
+        14: 9,
+        15: 8,
+        16: 7,
+        17: 6,
+        18: 5,
+        19: 4,
+        20: 3,
+        21: 2,
+        22: 1,
       },
     }
   },
@@ -104,14 +110,24 @@ export default {
       if (this.handicap) {
         this.convertedPositions = Object.assign({}, this.positions)
         let i = 0
-        for (const value in this.positions) {
+        for (const value in this.convertedPositions) {
           i++
-          // eslint-disable-next-line no-console
-          console.log('adjusted position' + (i - parseInt(this.handicap)))
-          // eslint-disable-next-line no-console
-          console.log(value)
-          // eslint-disable-next-line no-console
-          console.log(this.positions[value])
+
+          if (i - parseInt(this.handicap) < 1 && !this.allstar) {
+            this.convertedPositions[value] = 26 * 2
+          } else if (i - parseInt(this.handicap) < 1 && this.allstar) {
+            this.convertedPositions[value] = 26
+          } else {
+            for (const key in this.positions) {
+              if (i - parseInt(this.handicap) === parseInt(key)) {
+                this.convertedPositions[value] = this.positions[key]
+                if (!this.allstar && i - parseInt(this.handicap) < 11) {
+                  this.convertedPositions[value] =
+                    this.convertedPositions[value] * 2
+                }
+              }
+            }
+          }
         }
         // Come up with logic that like loops through the object and maps on new values
       }

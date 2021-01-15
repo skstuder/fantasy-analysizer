@@ -6,13 +6,29 @@
         for="handicap"
         >Is This Rider an Allstar?</label
       >
-      <input type="checkbox" class="border mt-3 py-2 px-3 text-grey-darkest" />
+      <input
+        v-model="isAllStar"
+        type="checkbox"
+        class="border mt-3 py-2 px-3 text-grey-darkest"
+        @click="allStarChanged(!isAllStar)"
+      />
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      isAllStar: false,
+    }
+  },
+  methods: {
+    allStarChanged(isAllStar) {
+      this.$emit('allStarChanged', isAllStar)
+    },
+  },
+}
 </script>
 
 <style scoped>

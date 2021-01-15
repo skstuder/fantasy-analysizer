@@ -4,9 +4,13 @@
       <h1 class="title pb-5">Rider Point Potiental</h1>
       <div>
         <handicap-input class="pb-5" @handicapChanged="updateHandicap" />
-        <allstar-checkbox class="pb-5"></allstar-checkbox>
+        <allstar-checkbox
+          class="pb-5"
+          @allStarChanged="updateAllStar"
+        ></allstar-checkbox>
       </div>
-      <no-results />
+      <no-results v-if="!handicap" />
+      <info-area v-if="handicap" :allstar="allstar" :handicap="handicap" />
       <results-grid v-if="handicap" />
     </div>
   </div>
@@ -17,8 +21,15 @@ import HandicapInput from '../components/HandicapInput'
 import ResultsGrid from '../components/ResultsGrid'
 import AllstarCheckbox from '../components/AllstarCheckbox'
 import NoResults from '../components/NoResults'
+import InfoArea from '../components/InfoArea'
 export default {
-  components: { HandicapInput, ResultsGrid, AllstarCheckbox, NoResults },
+  components: {
+    HandicapInput,
+    ResultsGrid,
+    AllstarCheckbox,
+    NoResults,
+    InfoArea,
+  },
   data() {
     return {
       handicap: 0,
@@ -29,6 +40,9 @@ export default {
   methods: {
     updateHandicap(value) {
       this.handicap = value
+    },
+    updateAllStar(value) {
+      this.allstar = value
     },
   },
 }

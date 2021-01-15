@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div>
-      <h1>A rider with a handicap 15 will score points as follows</h1>
-    </div>
     <div class="flex justify-center">
       <table class="flex flex-col sm:flex-row shadow-lg w-100 md:space-x-5">
         <div>

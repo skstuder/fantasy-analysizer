@@ -1,7 +1,7 @@
 <template>
   <div class="container bg-dark">
     <div class="w-full rounded shadow-lg p-8 m-4">
-      <h1 class="racing-font mb-3 text-4xl md:text-6xl">
+      <h1 class="racing-font mb-3 text-3xl md:text-6xl">
         Rider Point Potiental
       </h1>
       <div>

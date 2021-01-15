@@ -1,11 +1,13 @@
 <template>
-  <div>
+  <client-only>
     <div class="flex justify-center">
       <table class="flex flex-col sm:flex-row shadow-lg w-100 md:space-x-5">
         <div>
           <thead>
             <tr>
-              <th class="bg-red-600 border text-left px-8 py-4">Position</th>
+              <th class="bg-red-600 border text-left px-8 py-4">
+                Finishing Position
+              </th>
               <th class="bg-red-600 border text-left px-8 py-4">
                 Points You Get
               </th>
@@ -28,13 +30,15 @@
         <div>
           <thead>
             <tr class="hidden h-auto w-100 sm:table-row">
-              <th class="bg-red-600 border text-left px-8 py-4">Position</th>
+              <th class="bg-red-600 border text-left px-8 py-4">
+                Finishing Position
+              </th>
               <th class="bg-red-600 border text-left px-8 py-4">
                 Points You Get
               </th>
             </tr>
             <tr class="table-row sm:hidden h-0">
-              <th class="w-100 h-0" style="width: 126px"></th>
+              <th class="w-100 h-0" style="width: 198.4px"></th>
               <th class="w-100 h-0" style="width: 175px"></th>
             </tr>
           </thead>
@@ -54,7 +58,7 @@
         </div>
       </table>
     </div>
-  </div>
+  </client-only>
 </template>
 
 <script>

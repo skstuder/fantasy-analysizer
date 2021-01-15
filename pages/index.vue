@@ -26,6 +26,11 @@ export default {
       handicapEntered: false,
     }
   },
+  computed: {
+    hanicapEntered() {
+      return this.handicap
+    },
+  },
 }
 </script>
 

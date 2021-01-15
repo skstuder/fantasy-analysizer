@@ -3,40 +3,48 @@
     <div class="flex justify-center">
       <table class="flex flex-col sm:flex-row shadow-lg w-100 md:space-x-5">
         <div>
-          <tr>
-            <th class="bg-red-600 border text-left px-8 py-4">Position</th>
-            <th class="bg-red-600 border text-left px-8 py-4">
-              Points You Get
-            </th>
-          </tr>
-          <tr v-for="(points, position, index) in positions" :key="position">
-            <td v-if="index < 11" class="racing-font border px-8 py-4">
-              {{ position }}
-            </td>
-            <td v-if="index < 11" class="border px-8 py-4 racing-font">
-              {{ points }}pts
-            </td>
-          </tr>
+          <thead>
+            <tr>
+              <th class="bg-red-600 border text-left px-8 py-4">Position</th>
+              <th class="bg-red-600 border text-left px-8 py-4">
+                Points You Get
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(points, position, index) in positions" :key="position">
+              <td v-if="index < 11" class="racing-font border px-8 py-4">
+                {{ position }}
+              </td>
+              <td v-if="index < 11" class="border px-8 py-4 racing-font">
+                {{ points }}pts
+              </td>
+            </tr>
+          </tbody>
         </div>
         <div>
-          <tr class="hidden h-auto w-100 sm:table-row">
-            <th class="bg-red-600 border text-left px-8 py-4">Position</th>
-            <th class="bg-red-600 border text-left px-8 py-4">
-              Points You Get
-            </th>
-          </tr>
-          <tr class="table-row sm:hidden h-0">
-            <th class="w-100 h-0" style="width: 126px"></th>
-            <th class="w-100 h-0" style="width: 175px"></th>
-          </tr>
-          <tr v-for="(points, position, index) in positions" :key="position">
-            <td v-if="index > 10" class="racing-font border px-8 py-4">
-              {{ position }}
-            </td>
-            <td v-if="index > 10" class="border px-8 py-4 racing-font">
-              {{ points }}pts
-            </td>
-          </tr>
+          <thead>
+            <tr class="hidden h-auto w-100 sm:table-row">
+              <th class="bg-red-600 border text-left px-8 py-4">Position</th>
+              <th class="bg-red-600 border text-left px-8 py-4">
+                Points You Get
+              </th>
+            </tr>
+            <tr class="table-row sm:hidden h-0">
+              <th class="w-100 h-0" style="width: 126px"></th>
+              <th class="w-100 h-0" style="width: 175px"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(points, position, index) in positions" :key="position">
+              <td v-if="index > 10" class="racing-font border px-8 py-4">
+                {{ position }}
+              </td>
+              <td v-if="index > 10" class="border px-8 py-4 racing-font">
+                {{ points }}pts
+              </td>
+            </tr>
+          </tbody>
         </div>
       </table>
     </div>
@@ -56,6 +64,7 @@ export default {
   },
   data() {
     return {
+      convertedPositions: {},
       positions: {
         '1st': 26,
         '2nd': 23,
@@ -93,6 +102,13 @@ export default {
   methods: {
     calculatePoints() {
       if (this.handicap) {
+        this.convertedPositions = Object.assign({}, this.positions)
+        for (const [value, index] in this.positions) {
+          // eslint-disable-next-line no-console
+          console.log(value, index)
+          // eslint-disable-next-line no-console
+          console.log(this.positions[value])
+        }
         // Come up with logic that like loops through the object and maps on new values
       }
     },

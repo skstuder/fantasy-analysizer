@@ -103,9 +103,13 @@ export default {
     calculatePoints() {
       if (this.handicap) {
         this.convertedPositions = Object.assign({}, this.positions)
-        for (const [value, index] in this.positions) {
+        let i = 0
+        for (const value in this.positions) {
+          i++
           // eslint-disable-next-line no-console
-          console.log(value, index)
+          console.log('adjusted position' + (i - parseInt(this.handicap)))
+          // eslint-disable-next-line no-console
+          console.log(value)
           // eslint-disable-next-line no-console
           console.log(this.positions[value])
         }

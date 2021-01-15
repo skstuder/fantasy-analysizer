@@ -1,7 +1,9 @@
 <template>
   <div class="container bg-dark">
     <div class="w-full rounded shadow-lg p-8 m-4">
-      <h1 class="title pb-5">Rider Point Potiental</h1>
+      <h1 class="racing-font mb-3 text-4xl md:text-6xl">
+        Rider Point Potiental
+      </h1>
       <div>
         <handicap-input class="pb-5" @handicapChanged="updateHandicap" />
         <allstar-checkbox
@@ -79,7 +81,9 @@ export default {
 .bg-card {
   background: #3d3d59;
 }
-
+.racing-font {
+  font-family: 'Racing Sans One', cursive;
+}
 .title {
   font-family: 'Racing Sans One', cursive;
   display: block;
@@ -90,8 +94,9 @@ export default {
 }
 
 .subtitle {
+  font-family: 'Racing Sans One', cursive;
   font-weight: 300;
-  font-size: 42px;
+  font-size: 35px;
   color: #fefefe;
   word-spacing: 5px;
   padding-bottom: 15px;

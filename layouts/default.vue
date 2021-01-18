@@ -20,7 +20,7 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: ogImage,
+          content: process.env.BASE_URL + ogImage,
         },
       ],
     }

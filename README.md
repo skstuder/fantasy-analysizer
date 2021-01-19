@@ -4,7 +4,7 @@
 
 Deployed with netlify: https://pulpfantasypointpotiental.netlify.app/
 
-Pulpmx fantasy motocross utilizes a handicap scoring system that can be intimidating for beginners. This project shows the point potential for each handicap and allstar status possibility.
+Pulpmx fantasy motocross utilizes a handicap scoring system that can be intimidating for beginners. This project shows the point potential for each handicap and allstar status possibility. This site has gotten used quite a bit by pulpmx fantasy players and has been used and posted on the official fantasy instagram story which was a cool accomplishment, one of the first fun projects i've made that has been a useful tool.
 
 ## Build Setup
 

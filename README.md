@@ -1,4 +1,9 @@
+<img src="./assets/ogImage.png" alt="woman doing math in her head" width="500"/>
 # fantasy-analysizer
+
+Deployed with netlify: https://pulpfantasypointpotiental.netlify.app/
+
+Pulpmx fantasy motocross utilizes a handicap scoring system that can be intimidating for beginners. This project shows the point potential for each handicap and allstar status possibility.
 
 ## Build Setup
 
@@ -17,4 +22,6 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Tools used
+
+Nuxt, Tailwind, Netlify. Learned a lot about Nuxt with this project, even though it behaves like a SPA.

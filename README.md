@@ -1,5 +1,6 @@
-<img src="./assets/ogImage.png" alt="woman doing math in her head" width="500"/>
 # fantasy-analysizer
+
+<img src="./assets/ogImage.png" alt="woman doing math in her head" width="700"/>
 
 Deployed with netlify: https://pulpfantasypointpotiental.netlify.app/
 

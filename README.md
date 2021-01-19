@@ -26,3 +26,7 @@ $ npm run generate
 ## Tools used
 
 Nuxt, Tailwind, Netlify. Learned a lot about Nuxt with this project, even though it behaves like a SPA.
+
+## Todo
+
+Considering adding a rider analysis page that shows previous results of each rider in a dashboard.

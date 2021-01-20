@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import ogImage from '~/assets/ogImage.png'
 export default {
   head() {
     return {
@@ -16,11 +15,6 @@ export default {
           name: 'description',
           content:
             'Enter your handicap/allstar status and see the point potientials for your rider!',
-        },
-        {
-          hid: 'og:image',
-          property: 'og:image',
-          content: this.BASE_URL + ogImage,
         },
         {
           hid: 'og:description',

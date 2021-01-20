@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ogImage from '../assets/ogImage.png'
+import ogImage from '~/assets/ogImage.png'
 export default {
   head() {
     return {
@@ -20,7 +20,18 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: process.env.BASE_URL + ogImage,
+          content: this.BASE_URL + ogImage,
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content:
+            'Math is hard, use this handicap helper to see the point potiental of your pulp mx fantasy picks!',
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Pulpmx Fantasy Handicap Helper',
         },
       ],
     }

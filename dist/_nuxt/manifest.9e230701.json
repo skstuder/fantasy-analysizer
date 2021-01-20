@@ -1,7 +1,7 @@
 {
   "name": "fantasy-analysizer",
   "short_name": "fantasy-analysizer",
-  "description": "## Build Setup",
+  "description": "<img src=\"./assets/ogImage.png\" alt=\"woman doing math in her head\" width=\"700\"/>",
   "icons": [
     {
       "src": "/_nuxt/icons/icon_64x64.5f6a36.png",

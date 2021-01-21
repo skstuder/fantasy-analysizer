@@ -14,7 +14,7 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            'Enter your handicap/allstar status and see the point potientials for your rider!',
+            'Math is hard, use this handicap helper to see the point potiental of your pulp mx fantasy picks!',
         },
         {
           hid: 'og:description',

@@ -133,7 +133,6 @@ export default {
             }
           }
         }
-        // Come up with logic that like loops through the object and maps on new values
       }
     },
   },

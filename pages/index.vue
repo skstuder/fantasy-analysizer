@@ -18,7 +18,7 @@
         <info-area v-show="handicap" :allstar="allstar" :handicap="handicap" />
       </transition>
       <transition name="fade">
-        <results-grid
+        <point-potientals
           v-show="handicap"
           :allstar="allstar"
           :handicap="handicap"
@@ -30,14 +30,14 @@
 
 <script>
 import HandicapInput from '../components/HandicapInput'
-import ResultsGrid from '../components/ResultsGrid'
+import PointPotientals from '../components/PointPotientals'
 import AllstarCheckbox from '../components/AllstarCheckbox'
 import NoResults from '../components/NoResults'
 import InfoArea from '../components/InfoArea'
 export default {
   components: {
     HandicapInput,
-    ResultsGrid,
+    PointPotientals,
     AllstarCheckbox,
     NoResults,
     InfoArea,

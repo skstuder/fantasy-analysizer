@@ -4,7 +4,7 @@
   >
     <nuxt-link class="brand" to="/">Handicap Helper</nuxt-link>
     <span class="mx-5 invisible sm:visible bg-dark">|</span>
-    <nuxt-link class="bg-red-600 px-1 py-2 rounded font-bold" to="RiderLookup"
+    <nuxt-link class="bg-red-600 px-2 py-1 rounded font-bold" to="RiderLookup"
       >Past Results By Rider Lookup</nuxt-link
     >
   </div>

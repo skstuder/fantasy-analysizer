@@ -25,4 +25,4 @@ $ npm run generate
 
 ## Tools used
 
-Nuxt, Tailwind, Netlify. Learned a lot about Nuxt with this project, even though it behaves like a SPA.
+Nuxt, Tailwind, Netlify.

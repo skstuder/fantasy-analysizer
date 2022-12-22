@@ -32,7 +32,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import { required, between } from 'vuelidate/lib/validators'
 export default {

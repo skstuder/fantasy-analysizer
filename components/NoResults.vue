@@ -5,7 +5,7 @@
     </h1>
     <img
       class="md:w-1/2"
-      src="../assets/steve-confused.gif"
+      src="~/assets/steve-confused.gif"
       alt="steve matthes wandering around confused"
     />
   </div>

@@ -1,38 +1,28 @@
-# create-svelte
+# fantasy-analysizer
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+<img src="./src/lib/images/ogImage.png" alt="woman doing math in her head" width="700"/>
 
-## Creating a project
+Deployed with netlify: http://pulpfantasypoints.com/
 
-If you're seeing this, you've probably already done this step. Congrats!
+Pulpmx fantasy motocross utilizes a handicap scoring system that can be intimidating for beginners. This project shows the point potential for each handicap and allstar status possibility. This site has gotten used quite a bit by pulpmx fantasy players and has been used and posted on the official fantasy instagram story which was a cool accomplishment, one of the first fun projects i've made that has been a useful tool.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Build Setup
 
 ```bash
-npm run dev
+# install dependencies
+$ npm install
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm run start
+
+# generate static project
+$ npm run generate
 ```
 
-## Building
+## Tools used
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+SvelteKit, Tailwind, Netlify

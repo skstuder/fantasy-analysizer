@@ -28,6 +28,15 @@
 		content="Math is hard, use this handicap helper to see the point potentials of your pulp mx fantasy picks!"
 	/>
 	<meta property="og:image" content="https://raw.githubusercontent.com/stephenstuder/fantasy-analysizer/master/src/lib/images/ogImage.png" />
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-187783461-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-187783461-1');
+	</script>
 </svelte:head>
 
 <div class="flex justify-center">

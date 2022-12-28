@@ -27,6 +27,7 @@
 		property="og:description"
 		content="Math is hard, use this handicap helper to see the point potiental of your pulp mx fantasy picks!"
 	/>
+	<meta property="og:image" content="https://github.com/stephenstuder/fantasy-analysizer/blob/master/src/lib/images/ogImage.png" />
 </svelte:head>
 
 <div class="flex justify-center">

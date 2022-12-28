@@ -96,12 +96,12 @@
 					<tr class="even:dark-purp odd:light-purp">
 						<!-- {#if position <= 12} -->
 						<td
-							class="border-b border-slate-100 dark:border-slate-700 px-20 text-slate-500 dark:text-slate-400"
+							class="border-b border-slate-100 dark:border-slate-700 px-20"
 						>
 							{position + getOrdinal(position)}
 						</td>
 						<td
-							class="border-b border-slate-100 dark:border-slate-700 px-20 text-slate-500 dark:text-slate-400"
+							class="border-b border-slate-100 dark:border-slate-700 px-20"
 						>
 							{points}
 						</td>

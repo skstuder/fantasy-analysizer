@@ -17,8 +17,16 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Point Potentials</title>
+	<meta
+		name="description"
+		content="Math is hard, use this handicap helper to see the point potiental of your pulp mx fantasy picks!"
+	/>
+	<meta property="og:title" content="Pulpmx Fantasy Handicap Helper" />
+	<meta
+		property="og:description"
+		content="Math is hard, use this handicap helper to see the point potiental of your pulp mx fantasy picks!"
+	/>
 </svelte:head>
 
 <div class="flex justify-center">

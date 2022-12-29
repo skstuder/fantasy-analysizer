@@ -18,7 +18,7 @@
 
 <div class="mb-3">
 		{#if hasInvalidSelection}
-			<div class="mb-3">
+			<div class="mb-1">
 				<span class="text-red-400 text_small">Must be between -2 and 16</span>
 			</div>
 		{/if}

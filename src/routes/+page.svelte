@@ -59,7 +59,6 @@
 					<PointPotientals {isAllStar} {handicap} />
 				{/if}
 			</div>
-			<!-- TODO: Add nice transitions to page -->
 		</div>
 	</div>
 </div>
